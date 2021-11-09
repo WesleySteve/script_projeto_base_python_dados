@@ -38,14 +38,30 @@ _CRIAR() {
         mkdir data src && cd data && > .gitkeep && cd .. &&
         cd src && > teste.py && cd ..
 
+        # chamada da função
+
+        _ARQUIVOS
 
         echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"
 
-     
+        
 
         exit 0 ;
     
     fi
+
+}
+
+# função responsavel em coletar os arquivos de base de um projeto de dados
+
+_ARQUIVOS() {
+
+   git clone https://github.com/WesleySteve/arquivos_base_projeto_python_dados.git
+
+   cp arquivos_base_projeto_python_dados/* .
+
+
+   echo "## Coloque o nome do seu projeto aqui" > README.md
 
 }
 

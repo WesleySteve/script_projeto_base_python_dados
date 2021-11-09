@@ -5,7 +5,30 @@
 (($UID == 0)) && { echo "ROOT não!" ; exit 1 ; }
 
 
-# ------------------------ help do programa ----------------------------- #
+# --------------------- help do programa ---------------------------------- #
+
+_HELP() {
+
+    clear
+
+    cat << EOF
+        INFORMAÇÕES DE USO
+            - Este programa foi desenvolvido para rodar em um sistema linux 
+                que use o interpretador bash
+            - Para rodar o programa deve-se ter acesso a internet
+            - O sistema deve ter instalado o programa:
+                - git
+            - Os pacotes que devem estar instalados:
+                - python3-pip
+                - black 
+
+EOF
+
+}
+
+# ------------------- fim help do programa -------------------------------- #
+
+# ---------------------- ajuda do programa ---------------------------- #
 
 _AJUDA() {
 
@@ -16,9 +39,9 @@ _AJUDA() {
 EOF
 }
 
-# ----------------------- fim help do programa -------------------------- #
+# --------------------- fim ajuda do programa ------------------------- #
 
-# ----------------- inicio criar estrutura de diretórios ------------------ #
+# ---------------------  criar estrutura de diretórios -------------------- #
 
 # função responsavel em criar uma estrutura inicial de um projeto de dados
 
@@ -74,7 +97,7 @@ _ARQUIVOS() {
 # ---------------------------- menu entrada ------------------------------- #
 
 case "$1" in
-    -h|--help) _AJUDA       ;;
+    -h|--help) _HELP        ;;
     -c|--criar) _CRIAR      ;;
     *) _AJUDA
 esac

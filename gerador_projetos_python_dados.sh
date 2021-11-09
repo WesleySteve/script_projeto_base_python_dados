@@ -58,7 +58,9 @@ _ARQUIVOS() {
 
    git clone https://github.com/WesleySteve/arquivos_base_projeto_python_dados.git
 
-   cp arquivos_base_projeto_python_dados/* .
+   cp arquivos_base_projeto_python_dados/* . &&
+   cp arquivos_base_projeto_python_dados/.gitignore . &&
+   rm -rf arquivos_base_projeto_python_dados/
 
 
    echo "## Coloque o nome do seu projeto aqui" > README.md

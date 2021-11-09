@@ -65,11 +65,7 @@ _CRIAR() {
 
         _ARQUIVOS
 
-        echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"
-
-        cd $_nome
-
-        make format        
+        echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"    
 
         exit 0 ;
     

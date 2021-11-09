@@ -31,6 +31,11 @@ _CRIAR() {
         echo "NOME DO PROJETO NÃO DEFINIDOR!"
         exit 1 ;
 
+    else
+        mkdir $_nome && cd $_nome &&
+        mkdir data src && cd data && > .gitkeep && cd .. &&
+        cd src && > teste.py && cd ..
+
     
 
     fi

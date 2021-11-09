@@ -20,6 +20,8 @@ EOF
 
 # ----------------- inicio criar estrutura de diretórios ------------------ #
 
+# função responsavel em criar uma estrutura inicial de um projeto de dados
+
 _CRIAR() {
 
     local _nome=''
@@ -36,10 +38,14 @@ _CRIAR() {
         mkdir data src && cd data && > .gitkeep && cd .. &&
         cd src && > teste.py && cd ..
 
+
+        echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"
+
+     
+
+        exit 0 ;
     
-
     fi
-
 
 }
 

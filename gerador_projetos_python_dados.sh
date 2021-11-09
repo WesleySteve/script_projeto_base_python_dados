@@ -18,9 +18,6 @@ _HELP() {
             - Para rodar o programa deve-se ter acesso a internet
             - O sistema deve ter instalado o programa:
                 - git
-            - Os pacotes que devem estar instalados:
-                - python3-pip
-                - black 
 
 EOF
 

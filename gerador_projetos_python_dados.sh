@@ -44,7 +44,9 @@ _CRIAR() {
 
         echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"
 
-        
+        cd $_nome
+
+        make format        
 
         exit 0 ;
     

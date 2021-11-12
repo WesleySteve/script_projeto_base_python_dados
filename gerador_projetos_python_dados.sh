@@ -78,6 +78,8 @@ _ARQUIVOS() {
 
    cp arquivos_base_projeto_python_dados/* . &&
    cp arquivos_base_projeto_python_dados/.gitignore . &&
+   cp arquivos_base_projeto_python_dados/.flake8 . &&
+   cp arquivos_base_projeto_python_dados/.pylintrc . &&
    rm -rf arquivos_base_projeto_python_dados/
 
 

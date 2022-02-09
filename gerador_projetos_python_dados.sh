@@ -57,6 +57,7 @@ _CRIAR() {
         mkdir $nome && cd $nome &&
         mkdir docs && cd docs && > .gitkeep && cd .. &&
         mkdir data && cd data &&
+        mkdir raw && cd raw && > .gitkeep && cd .. &&
 
         # chamada da função
 

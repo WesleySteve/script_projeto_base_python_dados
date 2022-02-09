@@ -58,7 +58,9 @@ _CRIAR() {
         mkdir docs && cd docs && > .gitkeep && cd .. &&
         mkdir data && cd data &&
         mkdir raw && cd raw && > .gitkeep && cd .. &&
+        mkdir base && cd base && > .gitkeep && cd .. && cd .. &&
 
+        
         # chamada da função
 
         _ARQUIVOS

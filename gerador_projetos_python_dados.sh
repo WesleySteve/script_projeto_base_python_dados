@@ -55,8 +55,8 @@ _CRIAR() {
 
     else
         mkdir $nome && cd $nome &&
-        mkdir data src && cd data && > .gitkeep && cd .. &&
-        cd src && > teste.py && cd ..
+        mkdir docs && cd docs && > .gitkeep && cd .. &&
+        mkdir data && cd data &&
 
         # chamada da função
 

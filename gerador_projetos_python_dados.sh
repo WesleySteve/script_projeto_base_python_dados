@@ -4,6 +4,8 @@
 
 (($UID == 0)) && { echo "ROOT não!" ; exit 1 ; }
 
+# ----------------------- variaveis ---------------------------------------- #
+nome=''
 
 # --------------------- help do programa ---------------------------------- #
 
@@ -43,8 +45,6 @@ EOF
 # função responsavel em criar uma estrutura inicial de um projeto de dados
 
 _CRIAR() {
-
-    local nome=''
 
     read -p "Digite o nome do projeto: " nome
 

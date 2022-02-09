@@ -83,7 +83,7 @@ _ARQUIVOS() {
    rm -rf arquivos_base_projeto_python_dados/
 
 
-   echo "## Coloque o nome do seu projeto aqui" > README.md
+   echo "## ${nome}" > README.md
 
 }
 

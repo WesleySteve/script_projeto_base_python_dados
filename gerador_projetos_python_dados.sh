@@ -67,6 +67,8 @@ _CRIAR() {
         mkdir python && cd python && > __init__.py &&
         mkdir extract && cd extract && > __init__.py && > collect.py && cd .. &&
         mkdir transform && cd transform && > __init__.py && > transform.py && cd .. &&
+        mkdir load && cd load && > __init__.py && > load.py && cd .. && cd .. 
+
         
         # chamada da função
 

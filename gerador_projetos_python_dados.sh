@@ -44,17 +44,17 @@ EOF
 
 _CRIAR() {
 
-    local _nome=''
+    local nome=''
 
-    read -p "Digite o nome do projeto: " _nome
+    read -p "Digite o nome do projeto: " nome
 
-    if [[ -z $_nome ]] 
+    if [[ -z $nome ]] 
     then
         echo "NOME DO PROJETO NÃO DEFINIDOR!"
         exit 1 ;
 
     else
-        mkdir $_nome && cd $_nome &&
+        mkdir $nome && cd $nome &&
         mkdir data src && cd data && > .gitkeep && cd .. &&
         cd src && > teste.py && cd ..
 
@@ -62,7 +62,7 @@ _CRIAR() {
 
         _ARQUIVOS
 
-        echo "PROJETO ' $_nome ' CRIADO COM SUCESSO!"    
+        echo "PROJETO ' $nome ' CRIADO COM SUCESSO!"    
 
         exit 0 ;
     

@@ -4,32 +4,32 @@
 
 ## Arvore de diretórios
 
- - .
- - ├── data
- - │   ├── base
- - │   └── raw
- - ├── docs
- - ├── Makefile
- - ├── README.md
- - ├── requirements-dev.txt
- - ├── requirements.txt
- - └── src
- -     ├── __init__.py
- -     ├── python
- -     │   ├── extract
- -     │   │   ├── collect.py
- -     │   │   └── __init__.py
- -     │   ├── __init__.py
- -     │   ├── load
- -     │   │   ├── __init__.py
- -     │   │   └── load.py
- -     │   └── transform
- -     │       ├── __init__.py
- -     │       └── transform.py
- -     └── sql
- -         ├── sql_extract
- -         ├── sql_load
- -         └── sql_transform
+  - .
+  - ├── data
+  - │   ├── base
+  - │   └── raw
+  - ├── docs
+  - ├── Makefile
+  - ├── README.md
+  - ├── requirements-dev.txt
+  - ├── requirements.txt
+  - └── src
+    - ├── __init__.py
+    - ├── python
+    - │   ├── extract
+    - │   │   ├── collect.py
+    - │   │   └── __init__.py
+    - │   ├── __init__.py
+    - │   ├── load
+    - │   │   ├── __init__.py
+    - │   │   └── load.py
+    - │   └── transform
+    - │       ├── __init__.py
+    - │       └── transform.py
+    - └── sql
+        - ├── sql_extract
+        - ├── sql_load
+        - └── sql_transform
 
 
 ## Requisitos

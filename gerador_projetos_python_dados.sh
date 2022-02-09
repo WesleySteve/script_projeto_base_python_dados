@@ -66,6 +66,7 @@ _CRIAR() {
         mkdir sql_load && cd sql_load && > .gitkeep && cd .. && cd .. &&
         mkdir python && cd python && > __init__.py &&
         mkdir extract && cd extract && > __init__.py && > collect.py && cd .. &&
+        mkdir transform && cd transform && > __init__.py && > transform.py && cd .. &&
         
         # chamada da função
 

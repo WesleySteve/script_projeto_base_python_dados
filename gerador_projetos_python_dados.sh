@@ -61,8 +61,9 @@ _CRIAR() {
         mkdir base && cd base && > .gitkeep && cd .. && cd .. &&
         mkdir src && cd src && > __init__.py &&
         mkdir sql && cd sql &&
-
+        mkdir sql_extract && cd sql_extract && > .gitkeep && cd .. &&
         
+
         # chamada da função
 
         _ARQUIVOS

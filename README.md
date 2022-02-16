@@ -13,7 +13,7 @@
   - ├── README.md
   - ├── requirements-dev.txt
   - ├── requirements.txt
-  - └── src
+  - └── nome_do_projeto
     - ├── __init__.py
     - ├── python
     - │   ├── extract

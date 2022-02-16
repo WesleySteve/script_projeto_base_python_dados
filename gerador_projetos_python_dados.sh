@@ -59,7 +59,7 @@ _CRIAR() {
         mkdir data && cd data &&
         mkdir raw && cd raw && > .gitkeep && cd .. &&
         mkdir base && cd base && > .gitkeep && cd .. && cd .. &&
-        mkdir src && cd src && > __init__.py &&
+        mkdir $nome && cd $nome && > __init__.py &&
         mkdir sql && cd sql &&
         mkdir sql_extract && cd sql_extract && > .gitkeep && cd .. &&
         mkdir sql_transform && cd sql_transform && > .gitkeep && cd .. &&

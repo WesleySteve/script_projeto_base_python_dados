@@ -1,6 +1,7 @@
 ## Gerador_Projetos_Python_Dados
 
 - Este projeto tem como seu objetivo criar uma estrutura de diretórios inicial capaz de organizar um projedo de dados utilizando python
+- Adicione o arquivo gerador_projetos_python_dados.sh em um diretório no seu sistema que está no PATH de seu sistema para que o mesmo possa ser chamado de qualquer lugar em seu sistema.
 
 ## Arvore de diretórios
 

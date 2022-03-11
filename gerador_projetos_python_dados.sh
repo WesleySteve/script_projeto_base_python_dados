@@ -97,7 +97,14 @@ _ARQUIVOS() {
    rm -rf arquivos_base_projeto_python_dados/
 
 
-   echo "## ${nome}" > README.md
+   echo "## ${nome}
+   
+   ## Instruções iniciais:
+     - Após gerar o projeto:
+       - inicie um repositório git dentro do projeto
+       - rode o script **init_project.sh**:
+         -> para iniciar o ambiente virtual e instalar as dependencias
+       - em seguida aplique o commit inicial." > README.md
 
 }
 

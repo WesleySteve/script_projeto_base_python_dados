@@ -104,6 +104,8 @@ _ARQUIVOS() {
        - inicie um repositório git dentro do projeto
        - rode o script **init_project.sh**:
          -> para iniciar o ambiente virtual e instalar as dependencias
+       - use a opção reload window e abra um novo terminal:
+         -> para aparecer a virtualenv ativa
        - em seguida aplique o commit inicial." > README.md
 
 }

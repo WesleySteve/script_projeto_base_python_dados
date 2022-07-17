@@ -99,14 +99,50 @@ _ARQUIVOS() {
 
    echo "## ${nome}
    
-   ## Instruções iniciais:
+   ## Instruções iniciais quando estiver usando virtualenv:
      - Após gerar o projeto:
-       - inicie um repositório git dentro do projeto
+       - copie toda a configuracao menos a primeira linha do arquivo .pylintrc localizado na raiz do projeto gerado
+       - remova o arquivo .pylintrc
+      
+      - use o comandon na raiz do projeto:
+         ->  pylint --generate-rcfile > .pylintrc
+       - cole as configuracoes do .pylintrc que foi removido da raiz
+      
+      - inicie um repositório git dentro do projeto
        - rode o script **init_project.sh**:
          -> para iniciar o ambiente virtual e instalar as dependencias
        - use a opção reload window e abra um novo terminal:
          -> para aparecer a virtualenv ativa
+      
        - em seguida aplique o commit inicial." > README.md
+    
+    echo "    
+    ## Instruções iniciais quando estiver usando conda:
+     - Crie o ambiente com o nome do projeto
+     - Apos criar o ambiente gere o projeto
+     - Após gerar o projeto:
+       - abra um arquivo .py para o vscode reconhecer o ambiente
+       - escolha o ambiente virtual criado com o nome do projeto
+       - no script **init_project.sh**:
+         -> remova as 2 primeiras linhas referente ao virtualenv
+       - no arquivo **.pre-commit-config.yaml:
+         -> substitua no hook flake8 dentro da opcao entry:
+            bash -c .venv, mantendo do /bin para frente por:
+             -> caminho_do_seu_anaconda/envs/nome_do_ambiente_virtual
+       - copie toda a configuracao menos a primeira linha do arquivo .pylintrc localizado na raiz do projeto gerado
+       - remova o arquivo .pylintrc
+      
+      - use o comandon na raiz do projeto:
+         ->  pylint --generate-rcfile > .pylintrc
+       - cole as configuracoes do .pylintrc que foi removido da raiz
+      
+      - inicie um repositório git dentro do projeto
+       - rode o script **init_project.sh**:
+         -> para instalar as dependencias do projeto no ambiente virtual selecionado anteriormente
+       - use a opção reload window e abra um novo terminal:
+         -> para aparecer a virtualenv ativa
+       
+       - em seguida aplique o commit inicial." >> README.md
 
 }
 

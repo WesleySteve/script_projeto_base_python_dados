@@ -55,20 +55,7 @@ _CRIAR() {
 
     else
         mkdir $nome && cd $nome &&
-        mkdir docs && cd docs && > .gitkeep && cd .. &&
-        mkdir data && cd data &&
-        mkdir raw && cd raw && > .gitkeep && cd .. &&
-        mkdir base && cd base && > .gitkeep && cd .. && cd .. &&
-        mkdir $nome && cd $nome && > __init__.py &&
-        mkdir sql && cd sql &&
-        mkdir sql_extract && cd sql_extract && > .gitkeep && cd .. &&
-        mkdir sql_transform && cd sql_transform && > .gitkeep && cd .. &&
-        mkdir sql_load && cd sql_load && > .gitkeep && cd .. && cd .. &&
-        mkdir python && cd python && > __init__.py && > main.py &&
-        mkdir extract && cd extract && > __init__.py && > collect.py && cd .. &&
-        mkdir transform && cd transform && > __init__.py && > transform.py && cd .. &&
-        mkdir load && cd load && > __init__.py && > load.py && cd .. && cd .. && cd ..
-
+        mkdir $nome
         
         # chamada da função
 
@@ -88,11 +75,43 @@ _ARQUIVOS() {
 
    git clone https://github.com/WesleySteve/arquivos_base_projeto_python_dados.git
 
-   cp arquivos_base_projeto_python_dados/* . &&
-   cp arquivos_base_projeto_python_dados/.gitignore . &&
-   cp arquivos_base_projeto_python_dados/.flake8 . &&
-   cp arquivos_base_projeto_python_dados/.pylintrc . &&
-   cp arquivos_base_projeto_python_dados/.pre-commit-config.yaml . &&
+  # copiando os diretorios data e docs para raiz do projeto $nome
+  
+  # o diretorio data é responsavel em armazenar os arquivos de leitura para analises
+    # e responsavel em guardar os arquivos de banco de dados 
+
+  # o diretorio docs é responsavel em armazenar os arquivos de documentação
+
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/data . &&
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/docs . &&
+
+# copiando os diretorio python sql
+
+# o diretorio python é responsavel em armazenar arquivos .py que iram controlar 
+  # as chamadas das analises
+
+# o diretorio sql é resposavel em armazenar arquivos .sql que iram executar as 
+  # consultas responsavel em trazer os resultados das analises
+
+# o arquivo analise.ipynb é responsavel por fazer as analises de teste antes de
+  # estruturar o projeto em formato de produção
+
+# o arquivo __init__.py mostra para o interpretador python que aquele diretório
+  # é um pacote
+
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/nome_projeto/python $nome &&
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/nome_projeto/sql $nome &&
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/nome_projeto/analise.ipynb $nome &&
+   cp -r arquivos_base_projeto_python_dados/estrutura_projeto_dados/nome_projeto/__init__.py $nome &&
+   
+# copiando arquivos de configuração do projeto
+
+# os arquivos seguintes são responsaveis por manter um padrão do projeto
+
+   cp -r arquivos_base_projeto_python_dados/.gitignore . &&
+   cp -r arquivos_base_projeto_python_dados/.flake8 . &&
+   cp -r arquivos_base_projeto_python_dados/.pylintrc . &&
+   cp -r arquivos_base_projeto_python_dados/.pre-commit-config.yaml . &&
    cp -r arquivos_base_projeto_python_dados/.vscode . &&
    rm -rf arquivos_base_projeto_python_dados/
 

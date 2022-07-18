@@ -111,7 +111,6 @@ _ARQUIVOS() {
    cp -r arquivos_base_projeto_python_dados/.vscode . &&
    cp -r arquivos_base_projeto_python_dados/.flake8 . &&
    cp -r arquivos_base_projeto_python_dados/.gitignore . &&
-   cp -r arquivos_base_projeto_python_dados/.pylintrc . &&
    cp -r arquivos_base_projeto_python_dados/.pre-commit-config.yaml . &&
    cp -r arquivos_base_projeto_python_dados/Makefile . &&
    cp -r arquivos_base_projeto_python_dados/init_project.sh . &&
@@ -123,12 +122,15 @@ _ARQUIVOS() {
    
    ## Instruções iniciais quando estiver usando virtualenv:
      - Após gerar o projeto:
-       - copie toda a configuracao menos a primeira linha do arquivo .pylintrc localizado na raiz do projeto gerado
-       - remova o arquivo .pylintrc
-      
-      - use o comandon na raiz do projeto:
+      - use o comando na raiz do projeto:
          ->  pylint --generate-rcfile > .pylintrc
-       - cole as configuracoes do .pylintrc que foi removido da raiz
+       - coloque esta configuracao abaixo do [MAIN] no arquivo .pylintrc que será gerado na raiz do projeto:
+         disable=
+            C0114, # missing-module-docstring
+            C0115, # missing-class-docstring
+            C0303, # trailing-whitespace
+
+      - pesquise por: min-public-methods e defina 1
       
       - inicie um repositório git dentro do projeto
        - rode o script **init_project.sh**:
@@ -151,12 +153,16 @@ _ARQUIVOS() {
          -> substitua no hook flake8 dentro da opcao entry:
             bash -c .venv, mantendo do /bin para frente por:
              -> caminho_do_seu_anaconda/envs/nome_do_ambiente_virtual
-       - copie toda a configuracao menos a primeira linha do arquivo .pylintrc localizado na raiz do projeto gerado
-       - remova o arquivo .pylintrc
-      
-      - use o comandon na raiz do projeto:
+       
+       - use o comando na raiz do projeto:
          ->  pylint --generate-rcfile > .pylintrc
-       - cole as configuracoes do .pylintrc que foi removido da raiz
+       - coloque esta configuracao abaixo do [MAIN] no arquivo .pylintrc que será gerado na raiz do projeto:
+         disable=
+            C0114, # missing-module-docstring
+            C0115, # missing-class-docstring
+            C0303, # trailing-whitespace
+
+      - pesquise por: min-public-methods e defina 1
       
       - inicie um repositório git dentro do projeto
        - rode o script **init_project.sh**:

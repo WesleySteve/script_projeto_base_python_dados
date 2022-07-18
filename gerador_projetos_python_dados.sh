@@ -142,9 +142,9 @@ _ARQUIVOS() {
     
     echo "    
    ## Instruções iniciais quando estiver usando conda:
-     - Crie o ambiente com o nome do projeto
-     - Apos criar o ambiente gere o projeto
      - Após gerar o projeto:
+       - crie o ambiente virtual com o comando:
+         -> conda create -n nome_do_projeto python=version
        - abra um arquivo .py para o vscode reconhecer o ambiente
        - escolha o ambiente virtual criado com o nome do projeto
        - no script **init_project.sh**:

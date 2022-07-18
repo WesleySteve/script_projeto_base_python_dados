@@ -108,11 +108,14 @@ _ARQUIVOS() {
 
 # os arquivos seguintes são responsaveis por manter um padrão do projeto
 
-   cp -r arquivos_base_projeto_python_dados/.gitignore . &&
+   cp -r arquivos_base_projeto_python_dados/.vscode . &&
    cp -r arquivos_base_projeto_python_dados/.flake8 . &&
+   cp -r arquivos_base_projeto_python_dados/.gitignore . &&
    cp -r arquivos_base_projeto_python_dados/.pylintrc . &&
    cp -r arquivos_base_projeto_python_dados/.pre-commit-config.yaml . &&
-   cp -r arquivos_base_projeto_python_dados/.vscode . &&
+   cp -r arquivos_base_projeto_python_dados/Makefile . &&
+   cp -r arquivos_base_projeto_python_dados/init_project.sh . &&
+   cp -r arquivos_base_projeto_python_dados/requirements.txt . &&
    rm -rf arquivos_base_projeto_python_dados/
 
 

@@ -136,7 +136,7 @@ _ARQUIVOS() {
        - em seguida aplique o commit inicial." > README.md
     
     echo "    
-    ## Instruções iniciais quando estiver usando conda:
+   ## Instruções iniciais quando estiver usando conda:
      - Crie o ambiente com o nome do projeto
      - Apos criar o ambiente gere o projeto
      - Após gerar o projeto:
